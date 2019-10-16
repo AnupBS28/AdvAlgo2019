@@ -102,13 +102,13 @@ TEST_CASE("Case 14") {
 }
 TEST_CASE("Case 15") {
     the_messenger_implementation obj;
-    int result = obj.solve(3, 1, 4, "abc ");
+    int result = obj.solve(3, 1, 4, " HiH");
 
-    CHECK(result == 12);
+    CHECK(result == 10);
 }
 TEST_CASE("Case 16") {
     the_messenger_implementation obj;
-    int result = obj.solve(3, 1, 4, "abc ");
+    int result = obj.solve(3, 1, 4, "Hello lo world");
 
-    CHECK(result == 12);
+    CHECK(result == 28);
 }
