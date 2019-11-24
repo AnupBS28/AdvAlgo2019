@@ -102,13 +102,33 @@ TEST_CASE("Case 14") {
 }
 TEST_CASE("Case 15") {
     the_messenger_implementation obj;
-    int result = obj.solve(3, 1, 4, " HiH");
+    int result = obj.solve(3, 1, 4, "abc ");
 
-    CHECK(result == 10);
+    CHECK(result == 12);
 }
 TEST_CASE("Case 16") {
     the_messenger_implementation obj;
-    int result = obj.solve(3, 1, 4, "Hello lo world");
+    int result = obj.solve(3, 1, 4, "abc ");
 
-    CHECK(result == 28);
+    CHECK(result == 12);
+}
+TEST_CASE("Case 17") {
+    the_messenger_implementation obj;
+    int result = obj.solve(2,5,6, "abcdab");
+
+    CHECK(result == 12);
+}
+
+TEST_CASE("Case 18") {
+    the_messenger_implementation obj;
+    int result = obj.solve(2,5,6, "aaaaaa");
+
+    CHECK(result == 11);
+}
+
+TEST_CASE("Case 19") {
+    the_messenger_implementation obj;           // aaaa      msg::
+    int result = obj.solve(2,5,6, "aaaabc"); // 2+ 2 + 2+ 2
+
+    CHECK(result == 12);
 }
